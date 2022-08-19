@@ -46,3 +46,72 @@ PCB layout<br>
 ## Results
 When the cover of IR sensor 1 which is connected to the port B pin 2 is removed the motor 1 will be activated and the fan connected to motor 1 will start spinning. When the sensor 2 connected to the Port B pin 1 of the microcontroller is uncovered (note that sensor 1 is also uncovered) the motor 1 will remain active and same process will happen when the sensor three is uncovered the Port B pin 0 interrupt will occur and the fan connected to motor 1 will turn off and fan of motor 2 will start spinning.<br>
 Drive link to Implementing video -<br> https://drive.google.com/file/d/1fnrCYs5rXdZHivi_sKwrCcKetv8XF70b/view?usp=sharing<br>
+## Code
+The code used in implementing this water tank consists of two function the main function and the interrupt function. The main function runs until the water level fills pass the two sensors at the bottom of the tank and the motor 1 turns on. When the topmost sensor detects water the interrupt function will be called as that sensor is connected to the RB0 pin of the microcontroller and the motor 1 turns off and motor 2 will turn on as programmed in the below code. <br>
+<br>
+// PIC16F877A Configuration Bit Settings
+ 2 
+ 3 // 'C' source line config statements
+ 4 
+ 5 // CONFIG
+ 6 #pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator)
+ 7 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
+ 8 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+ 9 #pragma config BOREN = OFF      // Brown-out Reset Enable bit (BOR disabled)
+10 #pragma config LVP = OFF        // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+11 #pragma config CPD = OFF        // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+12 #pragma config WRT = OFF        // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+13 #pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+14 
+15 // #pragma config statements should precede project file includes.
+16 // Use project enums instead of #define for ON and OFF.
+17 
+18 //#include <xc.h>
+19 #include<htc.h> 
+20 
+21 #define _XTAL_FREQ 20000000
+22 
+23 void __interrupt() isr(void) {
+24     if (RB2 == 1 && RB1 == 1) {
+25         RC0 = 0;
+26         RC1 = 1;
+27         __delay_ms(500);
+28         RC1 = 0;
+29     }
+30     INTF = 0;
+31 
+32 }
+33 
+34 void main(void) {
+35     GIE = 1;
+36     INTE = 1;
+37     INTF = 0;
+38     //PEIE = 1 ;   
+39     INTEDG = 1;
+40 
+41     TRISB0 = 1; //SWITCH 03
+42     TRISB1 = 1; //SWITCH 02
+43     TRISB2 = 1; //SWITCH 01
+44     TRISC0 = 0;
+45     TRISC1 = 0;
+46     //PORTB = 0X00;
+47     PORTC = 0X00;
+48 
+49     while (1) {
+50         if (RB2 == 1 && RB1 == 0 && RB0 == 0) {
+51             RC0 = 1;
+52             RC1 = 0;
+53         }
+54         if (RB2 == 1 && RB1 == 1 && RB0 == 0) {
+55             RC0 = 1;
+56             RC1 = 0;
+57         } else if (RB2 == 0) {//
+58             RC0 = 0;
+59             RC1 = 0;
+60         }
+61     }
+62     return;
+63 }
+64 
+
+
