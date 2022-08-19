@@ -33,3 +33,9 @@ you can see the complete process in the following table<br>
 ## Proteus schematic diagram used to verify the code before physical implementation
 
 <img src="https://user-images.githubusercontent.com/111337119/185677402-713ec84a-15bd-4641-82c0-237f04c1f9af.png" width=500 >
+## PCB Design
+PCB layout<br>
+
+<img src="https://user-images.githubusercontent.com/111337119/185677694-1a21e1b9-0a35-45e9-ab3d-ed4b38497f87.png" width=500 >
+ ## Real Implementation
+ <img src="https://user-images.githubusercontent.com/111337119/185677868-7bb0e1ad-c46e-4f60-b4ba-679a4cf731fa.png" width=500 >
