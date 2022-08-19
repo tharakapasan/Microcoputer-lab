@@ -10,3 +10,20 @@ you can see the complete process in the following table<br>
 <br>
 
 <img src="https://user-images.githubusercontent.com/111337119/185676404-4b1960e6-5896-4773-a798-2ed3b8c88ed5.png" width=500 >
+## Apparatus
+•	PIC16F877A Microcontroller<br>
+•	PCB<br>
+•	2x 330Ω Resistors, 1X 1kΩ resistor<br>
+•	2x LEDS<br>
+•	2x Motors attached to plastic motor fans<br>
+•	2x relay modules<br>
+•	2x 22pFcapacitors<br>
+•	Crystal oscillator<br>
+•	Jumping wires<br>
+•	Breadboard<br>
+•	2x batteries<br>
+## Procedure
+•	The code needed to activate the sensors is programmed by the MPLAB software with the use of C programming. Here for the programming part interrupt functions were used in addition to the main function.
+•	Next the software-based implementation was done using proteus software using LEDS as a substitution for the motors and switches as a substitution for the water level sensors. 
+•	There after the PCB was made and the soldering of the PIC holder, LEDS, Capacitors, oscillators and resistors were done, and the power was given. Also, three LEDS were soldered initially instead of motors to check if the code and the microcontroller was working properly with the sensor variations.
+•	After it worked the motors were connected with the use of relays and the motors were worked according to the variation of the IR Sensor as given in the above table 1
