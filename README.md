@@ -10,7 +10,9 @@ you can see the complete process in the following table<br>
 <br>
 
 <img src="https://user-images.githubusercontent.com/111337119/185676404-4b1960e6-5896-4773-a798-2ed3b8c88ed5.png" width=500 >
+
 ## Apparatus
+
 •	PIC16F877A Microcontroller<br>
 •	PCB<br>
 •	2x 330Ω Resistors, 1X 1kΩ resistor<br>
@@ -22,6 +24,7 @@ you can see the complete process in the following table<br>
 •	Jumping wires<br>
 •	Breadboard<br>
 •	2x batteries<br>
+
 ## Procedure
 •	The code needed to activate the sensors is programmed by the MPLAB software with the use of C programming. Here for the programming part interrupt functions were used in addition to the main function.
 •	Next the software-based implementation was done using proteus software using LEDS as a substitution for the motors and switches as a substitution for the water level sensors. 
