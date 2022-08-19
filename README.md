@@ -84,7 +84,7 @@ The code used in implementing this water tank consists of two function the main 
                     RC1 = 1;
                     __delay_ms(500);
                     RC1 = 0;    
-                }<br>
+                }
                 INTF = 0;
     
             }
@@ -97,7 +97,7 @@ The code used in implementing this water tank consists of two function the main 
                INTEDG = 1;
     
                 TRISB0 = 1;//SWITCH 03
-                            TRISB1 = 1;//SWITCH 02
+                TRISB1 = 1;//SWITCH 02
                 TRISB2 = 1;//SWITCH 01
                 TRISC0 = 0;
                 TRISC1 = 0;
@@ -109,7 +109,7 @@ The code used in implementing this water tank consists of two function the main 
         if(RB2 == 1 && RB1 == 0 && RB0 == 0){
             RC0 = 1;
             RC1 = 0; 
-        }<br>
+        }
         if(RB2 == 1 && RB1 == 1 && RB0 == 0){
             RC0 = 1;
             RC1 = 0;
