@@ -8,4 +8,5 @@ In this lab we develop a small water level controlling system of a water tank us
 <img src="https://user-images.githubusercontent.com/111337119/185675962-05771fed-4d09-4597-ab0e-297f93a8f563.png" width=500 >
 you can see the complete process in the following table<br>
 <br>
-<img src="https://user-images.githubusercontent.com/111337119/185676193-5da35f9b-00f2-414e-b6fa-387f312297f4.png" width=500 >
+
+<img src="https://user-images.githubusercontent.com/111337119/185676404-4b1960e6-5896-4773-a798-2ed3b8c88ed5.png" width=500 >
