@@ -39,3 +39,10 @@ PCB layout<br>
 <img src="https://user-images.githubusercontent.com/111337119/185677694-1a21e1b9-0a35-45e9-ab3d-ed4b38497f87.png" width=500 >
  ## Real Implementation
  <img src="https://user-images.githubusercontent.com/111337119/185677868-7bb0e1ad-c46e-4f60-b4ba-679a4cf731fa.png" width=500 >
+
+ <img src="https://user-images.githubusercontent.com/111337119/185678151-b0dc96ba-62d8-402f-a941-505ffce7d9da.png" width=500 >
+ 
+ <img src="https://user-images.githubusercontent.com/111337119/185678239-32d745da-b037-4654-8348-48badb8f25b5.png" width=500 >
+## Results
+When the cover of IR sensor 1 which is connected to the port B pin 2 is removed the motor 1 will be activated and the fan connected to motor 1 will start spinning. When the sensor 2 connected to the Port B pin 1 of the microcontroller is uncovered (note that sensor 1 is also uncovered) the motor 1 will remain active and same process will happen when the sensor three is uncovered the Port B pin 0 interrupt will occur and the fan connected to motor 1 will turn off and fan of motor 2 will start spinning.<br>
+Drive link to Implementing video -<br> https://drive.google.com/file/d/1fnrCYs5rXdZHivi_sKwrCcKetv8XF70b/view?usp=sharing<br>
